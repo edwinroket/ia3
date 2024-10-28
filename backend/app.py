@@ -11,13 +11,13 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-# Configuración de Redis y OpenAI
-redis_host = "redis-14354.c246.us-east-1-4.ec2.redns.redis-cloud.com"
-redis_port = "14354"
-redis_password = "8PRXZJpF2DQMZ2ehZOA0Xc6B1UQ1UCfO"
-redis_username = "default"
-redis_index = "IDX46"
-gpt_key = "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"
+# Cargar configuraciones desde las variables de entorno
+redis_host = os.getenv("REDIS_HOST")
+redis_port = os.getenv("REDIS_PORT")
+redis_password = os.getenv("REDIS_PASSWORD")
+redis_username = os.getenv("REDIS_USERNAME")
+redis_index = os.getenv("REDIS_INDEX")
+gpt_key = os.getenv("GPT_KEY")
 
 # Conexión a Redis
 r = redis.Redis(host=redis_host, port=redis_port, db=0, username=redis_username, password=redis_password)
