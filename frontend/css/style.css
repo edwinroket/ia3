@@ -1,0 +1,156 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* Contenedor principal */
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón para abrir/cerrar el chatbot */
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Logos */
+.logos-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Chat */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+
+/* Chat Header */
+.chat-header {
+    background-color: #006341;
+    color: #C9B037;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Chat Body */
+.chat-body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+}
+
+/* Estilo de los mensajes */
+.chat-body .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 70%; /* Ancho máximo del mensaje */
+    word-wrap: break-word; /* Ajustar palabras largas */
+    display: block; /* Mostrar mensajes uno debajo del otro */
+}
+
+/* Mensaje del usuario */
+.chat-body .user-message {
+    background-color: #d1e7dd; /* Color de fondo para el mensaje del usuario */
+    color: #000; /* Color de texto */
+    text-align: left;
+    margin-left: auto; 
+    width: fit-content; /* Ajustar el ancho del mensaje al tamaño del contenido */
+}
+
+/* Mensaje del bot */
+.chat-body .bot-message {
+    background-color: #f8d7da; /* Color de fondo para el mensaje del bot */
+    color: #000; /* Color de texto */
+    text-align: left; 
+    margin-right: auto;
+    width: fit-content; /* Ajustar el ancho del mensaje al tamaño del contenido */
+}
+
+/* Chat Footer */
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.chat-footer button {
+    padding: 10px 15px;
+    background-color: #C9B037;
+    border: none;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* PDF Container */
+.pdf-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pdf-container iframe {
+    width: 80%;
+    height: 80%;
+    border: none;
+    background-color: #fff;
+}
+
+#close-pdf-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #C9B037;
+    border: none;
+    color: #006341;
+    border-radius: 4px;
+    cursor: pointer;
+}

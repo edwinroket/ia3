@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomasín - Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img id="toggle-chat-btn" src="images/openbutton.png" alt="Abrir Chatbot" class="toggle-btn">
+        
+        <div class="logos-container" id="logos-container" style="display: none;">
+            <img src="images/logo-lia.png" alt="Logo LIA" class="logo">
+            <img src="images/logo-informatica.png" alt="Logo Área Informática" class="logo">
+            <img src="images/logo-santo-tomas.png" alt="Logo Santo Tomás" class="logo">
+        </div>
+        
+        <div class="chat-container" id="chat-container" style="display: none;">
+            <div class="chat-header">
+                <h1>Tomasín</h1>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="intro-message">
+                    <p>¡Bienvenido a Tomasín, tu asistente virtual! Te puedo ayudar a responder preguntas sobre el código de ética, reglamento académico, reglamento de convivencia y del calendario académico de la universidad Santo Tomás. Simplemente escribe tu mensaje en la caja de abajo y presiona "Enviar".</p>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="user-input" placeholder="Escribe tu mensaje aquí..." autocomplete="off">
+                <button id="send-btn">Enviar</button>
+                <button id="play-audio-btn" style="display:none;">Reproducir Audio</button>
+            </div>
+
+            <!-- Botón "¿Cómo funciona?" dentro del chatbot -->
+            <div class="function-button">
+                <button id="show-pdfs-btn">¿Cómo funciona Tomasín?</button>
+            </div>
+        </div>
+
+        <div id="pdf-container" class="pdf-container" style="display:none;">
+            <button id="close-pdf-btn">Cerrar</button>
+            <iframe id="pdf-iframe" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
